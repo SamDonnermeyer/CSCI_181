@@ -1,0 +1,1 @@
+https://github.com/SamDonnermeyer/CSCI_464/blob/main/simple_linear_regression_practice/simple_linear_regression_practice.ipynb
