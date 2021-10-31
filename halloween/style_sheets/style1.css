@@ -1,0 +1,93 @@
+h1 {
+    text-align: center;
+    font-size: 45px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h2 { 
+    margin-bottom: 5px;
+    margin-left: 60px;
+    text-align: left;
+}
+
+p {
+    margin: 10px 100px;
+    text-align: left;
+    color: #626268;
+}
+
+ul {
+    margin: 10px 100px;
+    text-align: left;
+    color: #626268;
+}
+
+h2 {
+    color: #3F4048;
+    margin: 10px 100px;
+    text-align: center;
+}
+
+h3 {
+    color: #3F4048;
+    margin: 10px 100px;
+    text-align: left;
+}
+
+body {
+    background-color: #eee;
+}
+
+hr {
+    width: 60%
+}
+
+.banner {
+    background: url(../img/banner.jpeg);
+    width: 1000px;
+    height: 400px;
+    text-align: center;
+}
+
+.main_title {
+    text-align: center;
+    margin-top: 25px;
+    color: #3F4048;
+}
+
+.main_body {
+    padding: 10px;
+    margin: 5px 5px 5px;
+    text-align: left;
+}
+
+.card {
+    background-color: #ffffff;
+    margin: 10px auto;
+    padding: 10px;
+    width: 1000px;
+    height: 1800px; 
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.32), 0 3px 12px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* CSS Grid Elements for Products */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+.div3 { grid-area: 1 / 3 / 2 / 4; }
+.div4 { grid-area: 2 / 1 / 3 / 2; }
+.div5 { grid-area: 2 / 2 / 3 / 3; }
+.div6 { grid-area: 2 / 3 / 3 / 4; }
+
+.bio_text {
+    margin: 0px 40px;
+    text-align: left;
+    color: #626268;
+}
