@@ -1,5 +1,6 @@
 body, html {
     height: 100%;
+    background-color: #F4F4F9;
 }
 
 h1 {
@@ -12,12 +13,25 @@ h2 {
     margin-bottom: 5px;
     margin-left: 60px;
     text-align: left;
+    color: #005A77;
+    font-size: 40px;
+    margin: 40px 100px;
+    text-align: center;
+}
+
+h3 {
+    color: #005A77;
+    margin: 40px 100px;
+    text-align: left;
+    font-size: 30px;
 }
 
 p {
     margin: 10px 100px;
     text-align: left;
     color: #626268;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 ul {
@@ -26,25 +40,40 @@ ul {
     color: #626268;
 }
 
-h2 {
-    color: #3F4048;
-    margin: 10px 100px;
-    text-align: center;
-}
-
-h3 {
-    color: #3F4048;
-    margin: 10px 100px;
-    text-align: left;
-}
-
 body {
     background-color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 hr {
     width: 60%
 }
+
+.main_body {
+    padding: 10px;
+    margin: 5px 5px 5px;
+    text-align: left;
+    background-color: #F4F4F9;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #008CBA;
+}
+
+/* 
+#########
+Table Style 
+#########
+*/
 
 table.paleBlueRows {
     margin: 10px 100px;
@@ -84,27 +113,11 @@ table.paleBlueRows thead th:first-child {
 }
 
 
-
-.main_body {
-    padding: 10px;
-    margin: 5px 5px 5px;
-    text-align: left;
-}
-
-.button {
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    background-color: #008CBA;
-}
-
-/* CSS Grid Elements for BIOs */
+/* 
+#########
+CSS Grid Elements for BIOs 
+#########
+*/
 .parent {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -124,9 +137,14 @@ table.paleBlueRows thead th:first-child {
     margin: 0px 40px;
     text-align: left;
     color: #626268;
+    margin-top: 15px;
 }
 
-/* Hero Image */
+/* 
+#########
+Hero Image 
+#########
+*/
 .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/cover_photo.jpg");
@@ -135,6 +153,7 @@ table.paleBlueRows thead th:first-child {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    background-color: #F4F4F9;
 }
 
 .hero-text {
@@ -160,9 +179,10 @@ table.paleBlueRows thead th:first-child {
     font-size: 40px;
     opacity: 85%;
     margin-bottom: 45px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .hero_divider {
     width: 30%;
-    
+    margin-bottom: 55px;
 }

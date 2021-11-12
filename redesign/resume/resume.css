@@ -1,12 +1,24 @@
+html {
+    background-color: white;
+    font-family: 'Garamond', serif;
+    color: #2E2E3A;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
 h1 {
-    font-family: "Georgia";
     text-align: center;
+    color: #2E2E3A;
 }
 
 h2 {
-    font-family: "Georgia";
     text-align: left;
-    color: #051454;
+    color: #3E7CB1;
+}
+
+h3 {
+    color: #3e7bb1bd;
+    font-size: 15px;
 }
 
 header {
@@ -15,9 +27,18 @@ header {
 
 }
 
+body {
+    background-color: white;
+}
+
+rect {
+    stroke-width: .5;
+}
+
 .title {
     color: rgb(63, 61, 61);
     size: 22px;
+    text-align: center;
 }
 
 .body_p {
@@ -32,40 +53,110 @@ header {
     text-align: left;
     margin-top: 20px;
     margin-left: 10px;
-    color: #3F4048;
+    font-size: 35px;
 }
 
 .main_body {
-    padding: 10px;
+    padding-left: 10px;
+    padding-top: 50px;
+    padding-right: 10px;
     margin: 5px 5px 5px;
     text-align: center;
 }
 
-
-
-body {
-    background-color: #eee;
-}
-
-.card {
-    background-color: white;
-    margin: 10px auto;
-    padding: 10px;
-    width: 1000px;
-    height: 1600px; 
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.32), 0 3px 12px 0 rgba(0, 0, 0, 0.24);
-}
-
-h3 {
-    color: #3F4048;
-}
-
-rect {
-    stroke-width: .5;
-}
 
 .foot_note {
     margin: 10px 100px;
     text-align: left;
     color: #626268;
 }
+
+/* 
+#########
+CSS Grid Elements for Header
+#########
+*/
+.parent_header {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+}
+
+.div1 { 
+    grid-column-start: 1;
+    grid-column-end: span 1; 
+    grid-row-start: 1;
+    grid-row-end: span 1;
+
+    /* text options */
+    text-align: left;
+    vertical-align: middle;
+}
+
+.div2 { 
+    grid-column-start: 2;
+    grid-column-end: span 2; 
+    grid-row-start: 1;
+    grid-row-end: span 1;
+
+    /* text options */
+    text-align: right;
+    padding-right: 35px;
+    vertical-align: middle;
+}
+
+/* 
+#########
+CSS Grid Elements for Experience
+#########
+*/
+.parent_exp {
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.d1 { 
+    grid-column-start: 1;
+    grid-column-end: span 1; 
+    grid-row-start: 1;
+    grid-row-end: span 1;
+
+    /* text options */
+    text-align: left;
+    vertical-align: middle;
+}
+
+.d2 { 
+    grid-column-start: 2;
+    grid-column-end: span 1; 
+    grid-row-start: 1;
+    grid-row-end: span 1;
+
+    /* text options */
+    text-align: left;
+    vertical-align: middle;
+}
+
+.d3 { 
+    grid-column-start: 3;
+    grid-column-end: span 1; 
+    grid-row-start: 1;
+    grid-row-end: span 1;
+
+    /* text options */
+    text-align: left;
+    vertical-align: middle;
+}
+
+.d4 { 
+    grid-column-start: 4;
+    grid-column-end: span 1; 
+    grid-row-start: 1;
+    grid-row-end: span 1;
+
+    /* text options */
+    text-align: left;
+    vertical-align: middle;
+}
+
