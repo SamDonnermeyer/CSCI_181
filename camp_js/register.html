@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Load CSS -->
+<style>
+    h1 {
+        text-align: center;
+        font-size: 45px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    h2 { 
+        margin-bottom: 5px;
+        margin-left: 60px;
+        text-align: left;
+    }
+
+    p {
+        margin: 10px 100px;
+        text-align: left;
+        color: #626268;
+    }
+
+    ul {
+        margin: 10px 100px;
+        text-align: left;
+        color: #626268;
+    }
+
+    h2 {
+        color: #3F4048;
+        margin: 10px 100px;
+        text-align: center;
+    }
+
+    h3 {
+        color: #3F4048;
+        margin: 10px 100px;
+        text-align: left;
+    }
+
+    body {
+        background-color: #eee;
+    }
+
+    hr {
+        width: 60%
+    }
+
+    form {
+        margin: 10px 100px;
+        text-align: left;
+        color: #626268;
+    }
+
+    .main_title {
+        text-align: center;
+        margin-top: 25px;
+        color: #008CBA;
+    }
+
+    .main_body {
+        padding: 10px;
+        margin: 5px 5px 5px;
+        text-align: left;
+    }
+
+    .card {
+        background-color: #ffffff;
+        margin: 10px auto;
+        padding: 10px;
+        width: 600px;
+        height: 950px; 
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.32), 0 3px 12px 0 rgba(0, 0, 0, 0.24);
+    }
+
+    .button {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        background-color: #008CBA;
+    }
+
+    .button_red {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        background-color: #ba3b00;
+    }
+
+</style>
+
+<!-- Head -->
+<head>  
+    <meta charset="utf-8">  
+    <title>Donnermeyer: Ultramarathon Camp 2021 Registration</title>
+</head> 
+<body class="main_body">
+  <div class="card">
+
+    <!-- Header 1-->
+    <h1 class = "main_title">Ultramarathon Camp 2021!</h1>
+    <h2>November 10th-14th, 2021</h2><br>
+
+    <!-- Registration Form -->
+    <form action="index.html">
+        <label for="first_name">First Name:</label><br>
+        <input type="text" id ="first_name" name="first_name"><br><br>
+        
+        <label for="last_name">Last Name:</label><br>
+        <input type="text" id ="last_name" name="last_name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" size="30"><br><br>
+
+        <label for="age">Age:</label><br>
+        <select name="age" id="age">
+            <option value="blank"></option>
+            <option value="18-21">18-21</option>
+            <option value="22-30">22-30</option>
+            <option value="31-45">31-45</option>
+            <option value="46-59">46-59</option>
+            <option value="60+">60+</option>
+        </select><br><br>
+
+        T-Shirt Size:<br>
+        <input type="radio" id="t1" name="tshirt" value="S" checked>
+        <label for="t1">Small</label><br>
+        <input type="radio" id="t2" name="tshirt" value="M">
+        <label for="t2">Medium</label><br>  
+        <input type="radio" id="t3" name="tshirt" value="L">
+        <label for="t3">Large</label><br>
+        <input type="radio" id="t4" name="tshirt" value="XL">
+        <label for="t4">Extra Large</label><br><br>
+
+        Preferred Running Types:<br>
+        <input type="checkbox" id="a1" name="activities" value="trail">
+        <label for="a1">Trails</label><br>
+        <input type="checkbox" id="a2" name="activities" value="road">
+        <label for="a2">Road</label><br>
+        <input type="checkbox" id="a3" name="activities" value="speed">
+        <label for="a3">Speed</label><br>
+        <input type="checkbox" id="a4" name="activities" value="track">
+        <label for="a4">Track</label><br><br>
+
+        <label for="race_date">Date of Upcomming Race:</label><br>
+        <input type="date" id="race_date" name="upcomming_race" value="2021-11-14" min="2021-11-14" max="2022-12-31"><br><br>
+
+        <label for="races">Races Participated In:</label><br>
+        <textarea name="races" id="races" placeholder="Ex. Western 100 & Hardrock 100" rows="5" cols="50"></textarea><br><br>
+
+        <label for="profile">Upload a Profile Picture:</label><br>
+        <input type="file" id="profile" name="profile_pic" accept="image/png, image/jpeg"><br><br>
+
+
+        <input type="submit" id="submit" class="button" value="Register">
+        <input type="reset" class="button_red">
+        
+
+    </form>
+
+        
+    <main>
+  </div>
+</body>
+</html>
