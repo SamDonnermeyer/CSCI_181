@@ -2,105 +2,7 @@
 <html lang="en">
 
 <!-- Load CSS -->
-<style>
-    h1 {
-        text-align: center;
-        font-size: 45px;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    }
-
-    h2 { 
-        margin-bottom: 5px;
-        margin-left: 60px;
-        text-align: left;
-    }
-
-    p {
-        margin: 10px 100px;
-        text-align: left;
-        color: #626268;
-    }
-
-    ul {
-        margin: 10px 100px;
-        text-align: left;
-        color: #626268;
-    }
-
-    h2 {
-        color: #3F4048;
-        margin: 10px 100px;
-        text-align: center;
-    }
-
-    h3 {
-        color: #3F4048;
-        margin: 10px 100px;
-        text-align: left;
-    }
-
-    body {
-        background-color: #eee;
-    }
-
-    hr {
-        width: 60%
-    }
-
-    form {
-        margin: 10px 100px;
-        text-align: left;
-        color: #626268;
-    }
-
-    .main_title {
-        text-align: center;
-        margin-top: 25px;
-        color: #008CBA;
-    }
-
-    .main_body {
-        padding: 10px;
-        margin: 5px 5px 5px;
-        text-align: left;
-    }
-
-    .card {
-        background-color: #ffffff;
-        margin: 10px auto;
-        padding: 10px;
-        width: 600px;
-        height: 950px; 
-        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.32), 0 3px 12px 0 rgba(0, 0, 0, 0.24);
-    }
-
-    .button {
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        background-color: #008CBA;
-    }
-
-    .button_red {
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        background-color: #ba3b00;
-    }
-
-</style>
+<link rel="stylesheet" href="register.css">
 
 <!-- Head -->
 <head>  
@@ -108,11 +10,11 @@
     <title>Donnermeyer: Ultramarathon Camp 2021 Registration</title>
 </head> 
 <body class="main_body">
-  <div class="card">
+  <div class="card" id="card">
 
     <!-- Header 1-->
     <h1 class = "main_title">Ultramarathon Camp 2021!</h1>
-    <h2>November 10th-14th, 2021</h2><br>
+    <h2 id="camp_date">November 10th-14th, 2021</h2><br>
 
     <!-- Registration Form -->
     <form action="index.html">
@@ -126,14 +28,7 @@
         <input type="email" id="email" name="email" size="30"><br><br>
 
         <label for="age">Age:</label><br>
-        <select name="age" id="age">
-            <option value="blank"></option>
-            <option value="18-21">18-21</option>
-            <option value="22-30">22-30</option>
-            <option value="31-45">31-45</option>
-            <option value="46-59">46-59</option>
-            <option value="60+">60+</option>
-        </select><br><br>
+        <input type="number" min="18" max="90" id="age"><br><br>
 
         T-Shirt Size:<br>
         <input type="radio" id="t1" name="tshirt" value="S" checked>
@@ -165,14 +60,64 @@
         <input type="file" id="profile" name="profile_pic" accept="image/png, image/jpeg"><br><br>
 
 
-        <input type="submit" id="submit" class="button" value="Register">
-        <input type="reset" class="button_red">
+        <input type="button" id="submit_btn" class="button" value="Register" onclick="user_registration()">
+        <input type="button" id="cancel_btn" class="button_red" value="Cancel" onclick="user_cancel()">
         
+        <!-- Ending Messages - To User -->
+        <p id="end_msg1" class="end_msg">
+        </p>
+
+        <img id="register_image">
+
+        <p id="end_msg2" class="end_msg">
+        </p>
 
     </form>
 
         
     <main>
   </div>
+
+<!-- JS -->
+<script>
+// Thank Registrant
+function user_registration() {
+    // Give user message
+    var user_name = document.getElementById("first_name").value;
+    document.getElementById("end_msg1").innerHTML = "<br>Thank you " + user_name + " for registering!";
+
+    // Add image to visual queue user to completed registration
+    document.getElementById("register_image").src="images/Checkmark.png";
+
+    // Give style to Camp Date
+    document.getElementById("camp_date").style.fontSize="55px";
+    document.getElementById("camp_date").style.color="#BA3B00";
+    document.getElementById("card").style.height="1200px";
+
+    // Give user message based on age
+    var user_age = document.getElementById("age").value;
+
+    if (user_age > 50) {
+        document.getElementById("end_msg2").innerHTML = "You are an experienced runner!";
+    } else if (user_age < 25) {
+        document.getElementById("end_msg2").innerHTML = "You are a younger runner, we look forward to helping you learn and grow!";
+    } else {
+        document.getElementById("end_msg2").innerHTML = "You are running in your prime!";
+    }
+
+}
+
+// Leaving user messge 
+function user_cancel() {
+    // Give user parting message 
+    document.getElementById("end_msg1").innerHTML = "<br>Sorry to see you go!";
+
+    // Make card larger
+    document.getElementById("card").style.height="1000px";
+
+}
+
+</script>
+
 </body>
 </html>
